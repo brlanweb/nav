@@ -1360,23 +1360,23 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 const hh = new Date().getHours(),mm = new Date().getMinutes(),hhmmt = hh + '.' + mm;
-document.querySelector('.time .icon-container').innerText = '今天 废' + hh + '时';
+document.querySelector('.time .icon-container').innerText = '今天已废' + hh + '时';
 document.querySelector('.time .progress-done').setAttribute("data-done", parseInt(hhmmt/24*100));
 document.querySelector('.time .percent').innerText = parseInt(hhmmt/24*100) + '%';
 
 dd = new Date().getDay();
 if(dd==0){dd=7};
-document.querySelector('.week .icon-container').innerText = '本周 废' + dd + ' 天';
+document.querySelector('.week .icon-container').innerText = '本周已废' + dd + '天';
 document.querySelector('.week .progress-done').setAttribute("data-done", parseInt(dd/7*100));
 document.querySelector('.week .percent').innerText = parseInt(dd/7*100) + '%';
 
 const md = new Date().getDate(),months = new Date(new Date().getFullYear(), new Date().getMonth()+1, 0).getDate();
-document.querySelector('.month .icon-container').innerText = '本月  废' + md + ' 天';
+document.querySelector('.month .icon-container').innerText = '本月已废' + md + '天';
 document.querySelector('.month .progress-done').setAttribute("data-done", parseInt(md/months*100));
 document.querySelector('.month .percent').innerText = parseInt(md/months*100) + '%';
 
 const yy = new Date().getMonth();
-document.querySelector('.year .icon-container').innerText = '今年 废' + yy + '月' + md +  '天';
+document.querySelector('.year .icon-container').innerText = '今年已废' + yy + '月' + md +  '天';
 document.querySelector('.year .progress-done').setAttribute("data-done", parseInt(yy/12*100));
 document.querySelector('.year .percent').innerText = parseInt(yy/12*100) + '%';
 
@@ -1388,7 +1388,7 @@ const dayDiff = Math.floor(dateDiff / (24 * 3600 * 1000));//计算出相差天�
 const leave1=dateDiff%(24*3600*1000)    //计算天数后剩余的毫秒数
 const hours=Math.floor(leave1/(3600*1000))//计算出小时数
 const  dayDifft = 365+dayDiff;
-document.querySelector('.festival .icon-container').innerText = '离春节还有' + Math.abs(dayDiff) + '天' +Math.abs(hours)+'时';
+document.querySelector('.festival .icon-container').innerText = '春节还有' + Math.abs(dayDiff) + '天' +Math.abs(hours)+'时';
 document.querySelector('.festival .progress-done').setAttribute("data-done", parseInt(dayDifft/365*100));
 document.querySelector('.festival .percent').innerText = parseInt(dayDifft/365*100) + '%';
 const progressDone = document.querySelectorAll('.progress-done');
