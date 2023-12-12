@@ -1360,7 +1360,7 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 const hh = new Date().getHours(),mm = new Date().getMinutes(),hhmmt = hh + '.' + mm;
-document.querySelector('.time .icon-container').innerText = '今天 废' + hh + ' 小时';
+document.querySelector('.time .icon-container').innerText = '今天 废' + hh + '时';
 document.querySelector('.time .progress-done').setAttribute("data-done", parseInt(hhmmt/24*100));
 document.querySelector('.time .percent').innerText = parseInt(hhmmt/24*100) + '%';
 
