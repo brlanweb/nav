@@ -1322,13 +1322,7 @@
 <script src="js/lozad.min.js"></script>
 
 <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?da0a98a4e7541291c6b76fd8cbc0e3e7";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-})();
+
 const hh = new Date().getHours(),mm = new Date().getMinutes(),hhmmt = hh + '.' + mm;
 document.querySelector('.time .icon-container').innerText = '今天已废' + hh + '时';
 document.querySelector('.time .progress-done').setAttribute("data-done", parseInt(hhmmt/24*100));
